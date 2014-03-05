@@ -1,4 +1,13 @@
-execute pathogen#infect()
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'dantler/vim-alternate'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'airblade/vim-gitgutter'
+
 let mapleader = ','
 
 set nocompatible
@@ -14,7 +23,6 @@ set wmnu
 set wildmode=longest,list
 set showmatch
 set ls=2
-filetype on
 set nobk
 set tabstop=2
 set shiftwidth=2
@@ -43,7 +51,7 @@ set enc=utf-8
 set directory=/tmp
 set mouse=a
 
-filetype plugin on
+filetype plugin indent on
 
 autocmd FileType c,h setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd FileType make setlocal shiftwidth=4 tabstop=4 noexpandtab
