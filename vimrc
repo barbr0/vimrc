@@ -80,6 +80,7 @@ set colorcolumn=80
 
 noremap <silent> <leader>T :tabnew<CR>
 noremap <silent> <leader>l !php -l %<CR>
+nmap <silent> <leader>p :CtrlPTag<CR>
 
 set statusline=
 set statusline+=%0*\[%n]                       "buffernr
