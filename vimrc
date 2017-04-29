@@ -1,12 +1,13 @@
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'dantler/vim-alternate'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'airblade/vim-gitgutter'
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'dantler/vim-alternate'
+Plug 'nanotech/jellybeans.vim'
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
 
 let mapleader = ','
 
@@ -78,9 +79,7 @@ set colorcolumn=80
 "nnoremap <left> <nop>
 "nnoremap <right> <nop>
 
-noremap <silent> <leader>T :tabnew<CR>
-noremap <silent> <leader>l !php -l %<CR>
-nmap <silent> <leader>p :CtrlPTag<CR>
+nmap <silent> <c-p> :FZF<CR>
 
 set statusline=
 set statusline+=%0*\[%n]                       "buffernr
